@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SportStore.Models.Interfaces
 {
-    interface IProductRepository
+    public interface IProductRepository
     {
         IEnumerable<Product> Products { get; }
     }

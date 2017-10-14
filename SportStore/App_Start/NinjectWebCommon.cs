@@ -10,6 +10,11 @@ namespace SportStore.App_Start
 
     using Ninject;
     using Ninject.Web.Common;
+    using Moq;
+    using SportStore.Models.Interfaces;
+    using System.Collections.Generic;
+    using SportStore.Models.Entities;
+    using SportStore.Models.DataBase;
 
     public static class NinjectWebCommon 
     {
@@ -61,6 +66,7 @@ namespace SportStore.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
+            kernel.Bind<IProductRepository>().To<EfProductRepository>();
         }        
     }
 }
