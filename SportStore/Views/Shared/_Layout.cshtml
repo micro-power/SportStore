@@ -8,7 +8,7 @@
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
-<body>
+<body style="padding-top: 70px">
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -30,7 +30,14 @@
         </div>
     </div>
     <div class="container body-content">
-        @RenderBody()
+        <div class="row panel">
+            <div id="categories" class="col-xs-3">
+                Później umieścimy tu coś użytecznego.
+            </div>
+            <div class="col-xs-8">
+                @RenderBody()
+            </div>
+        </div>
         <hr />
         <footer>
             <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
